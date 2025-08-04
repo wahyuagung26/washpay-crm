@@ -4,7 +4,7 @@ const ROOTS = {
     AUTH: '/auth',
     DASHBOARD: '/dashboard',
     CLIENTS: '/clients',
-    TOPUP: '/topup',
+    TOPUP: '/topups',
     BASE: '',
 };
 
