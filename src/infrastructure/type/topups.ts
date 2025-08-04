@@ -14,7 +14,7 @@ export interface TopUpResponse {
     source_bank_name: string;
     source_account_number: string;
     source_account_holder_name: string;
-    updated_evidence_at: string;
+    update_evidence_at: string;
     processed_at: string;
     processed_by: string;
     client_name: string;

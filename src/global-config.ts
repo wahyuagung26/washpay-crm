@@ -34,7 +34,7 @@ export type ConfigValue = {
 // ----------------------------------------------------------------------
 
 export const CONFIG: ConfigValue = {
-    appName: 'Simala',
+    appName: 'WashPay',
     appVersion: packageJson.version,
     serverUrl: process.env.NEXT_PUBLIC_SERVER_URL ?? '',
     apiUrl: process.env.NEXT_PUBLIC_API_URL ?? '',
