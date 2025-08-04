@@ -1,0 +1,1 @@
+export const ADMIN_PHONE_NUMBER = '6282142545577';
