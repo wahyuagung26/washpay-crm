@@ -7,7 +7,6 @@ import { useDebouncedCallback } from 'use-debounce';
 
 import { getListTopUp } from 'src/infrastructure/api';
 
-
 export const useTopupList = () => {
   const form = useForm();
   const [page, setPage] = useState(1);

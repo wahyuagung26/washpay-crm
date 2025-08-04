@@ -48,7 +48,7 @@ export const ListClientPage = () => {
                 <TableCell>
                   <Stack direction="column" spacing={0.5}>
                     <Typography variant="subtitle2">{item.name}</Typography>
-                    <Typography variant="caption" color="text.secondary">
+                    <Typography variant="body2" color="text.secondary">
                       ID: {item.id}
                     </Typography>
                   </Stack>
@@ -57,11 +57,11 @@ export const ListClientPage = () => {
                   <Stack direction="column" spacing={0.5}>
                     <Stack direction="row" alignItems="center" spacing={1}>
                       <Iconify icon="solar:user-bold-duotone" width={16} height={16} />
-                      <Typography variant="body2">{item.owner_name}</Typography>
+                      <Typography variant="body1">{item.owner_name}</Typography>
                     </Stack>
                     <Stack direction="row" alignItems="center" spacing={1}>
                       <Iconify icon="solar:phone-calling-rounded-bold-duotone" width={16} height={16} />
-                      <Typography variant="caption" color="text.secondary">{item.owner_phone}</Typography>
+                      <Typography variant="body2" color="text.secondary">{item.owner_phone}</Typography>
                     </Stack>
                   </Stack>
                 </TableCell>
@@ -69,11 +69,11 @@ export const ListClientPage = () => {
                   <Stack direction="column" spacing={0.5}>
                     <Stack direction="row" alignItems="center" spacing={1}>
                       <Iconify icon="solar:crown-star-bold-duotone" width={16} height={16} />
-                      <Typography variant="body2">{item.subscription_name}</Typography>
+                      <Typography variant="body1">{item.subscription_name}</Typography>
                     </Stack>
                     <Stack direction="row" alignItems="center" spacing={1}>
                       <Iconify icon="solar:calendar-bold-duotone" width={16} height={16} />
-                      <Typography variant="caption" color="text.secondary">
+                      <Typography variant="body2" color="text.secondary">
                         {item?.subscription_expired_at ? new Date(item.subscription_expired_at).toLocaleDateString('id-ID') : '-'}
                       </Typography>
                     </Stack>
@@ -82,7 +82,7 @@ export const ListClientPage = () => {
                 <TableCell align="right">
                   <Stack direction="row" alignItems="center" justifyContent="flex-end" spacing={1}>
                     <Iconify icon="solar:wallet-money-bold-duotone" width={16} height={16} />
-                    <Typography variant="body2" fontWeight="medium">
+                    <Typography variant="body1" fontWeight="medium">
                       Rp {item.balance.toLocaleString('id-ID')}
                     </Typography>
                   </Stack>

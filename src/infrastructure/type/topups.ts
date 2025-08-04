@@ -27,6 +27,7 @@ export interface PayloadApprovalTopUp {
     id: number;
     status: number;
     status_notes: string;
+    approved_amount: number;
 }
 
 export interface ParamListTopUp extends QueryParams {

@@ -1,1 +1,6 @@
 export const ADMIN_PHONE_NUMBER = '6282142545577';
+
+export const STATUS_TOPUP_PENDING = 0;
+export const STATUS_TOPUP_PENDING_APPROVAL = 1;
+export const STATUS_TOPUP_APPROVED = 2;
+export const STATUS_TOPUP_REJECTED = 3;
