@@ -11,8 +11,6 @@ import Alert from '@mui/material/Alert';
 import { useTheme } from '@mui/material/styles';
 import { iconButtonClasses } from '@mui/material/IconButton';
 
-import { useAuthContext } from 'src/modules/auth/hooks';
-
 import { Logo } from 'src/components/logo';
 import { useSettingsContext } from 'src/components/settings';
 
@@ -28,7 +26,6 @@ import { HeaderSection } from '../core/header-section';
 import { LayoutSection } from '../core/layout-section';
 import { AccountDrawer } from '../components/account-drawer';
 import { SettingsButton } from '../components/settings-button';
-import { WorkspacesPopover } from '../components/workspaces-popover';
 import { navData as dashboardNavData } from '../nav-config-dashboard';
 import { dashboardLayoutVars, dashboardNavColorVars } from './css-vars';
 
@@ -71,8 +68,6 @@ export function DashboardLayout({
     const isNavMini = settings.state.navLayout === 'mini';
     const isNavHorizontal = settings.state.navLayout === 'horizontal';
     const isNavVertical = isNavMini || settings.state.navLayout === 'vertical';
-
-    const { user } = useAuthContext();
 
     const renderHeader = () => {
         const headerSlotProps: HeaderSectionProps['slotProps'] = {
@@ -123,16 +118,6 @@ export function DashboardLayout({
                         <VerticalDivider sx={{ [theme.breakpoints.up(layoutQuery)]: { display: 'flex' } }} />
                     )}
 
-                    {/** @slot Workspace popover */}
-                    <WorkspacesPopover
-                        data={user?.access_outlets?.map((item: any) => ({
-                            id: String(item.id),
-                            name: item.name,
-                            logo: item.logo_url ?? '',
-                            plan: 'Free'
-                        })) ?? []}
-                        sx={{ color: 'var(--layout-nav-text-primary-color)' }}
-                    />
                 </>
             ),
             rightArea: (

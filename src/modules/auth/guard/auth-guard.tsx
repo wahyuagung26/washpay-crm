@@ -67,9 +67,9 @@ export function AuthGuard({ children }: AuthGuardProps) {
 
         // get first word if split by /
         let pathFeature = pathname.split('/')[1] || '';
+        
         // remove all slash
         pathFeature = pathFeature.replace(/\//g, '');
-        console.log('pathFeature', pathFeature);
         if (checkAccess(pathFeature as any) || checkAccess(`${pathFeature}.view` as any)) {
             setIsChecking(false);
             return;

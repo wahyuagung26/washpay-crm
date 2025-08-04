@@ -13,8 +13,8 @@ export default function Layout({ children }: Props) {
             <AuthSplitLayout
                 slotProps={{
                     section: {
-                        title: 'Hi, Selamat datang',
-                        subtitle: 'Simala adalah partner yang akan membantu memantau bisnis laundry anda.',
+                        title: 'CRM WashPay',
+                        subtitle: 'Silakan masuk ke akun Anda untuk melanjutkan.',
                     },
                 }}
             >

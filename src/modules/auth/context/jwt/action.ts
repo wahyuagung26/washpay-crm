@@ -1,8 +1,6 @@
 'use client';
 
-import type { RegisterPayload } from 'src/infrastructure/type';
-
-import { postLogin, postRegister } from 'src/infrastructure/api';
+import { postLogin } from 'src/infrastructure/api';
 
 import { setSession, clearStorage } from './utils';
 
@@ -36,38 +34,12 @@ export const signInWithPassword = async ({ email, password }: SignInParams): Pro
 };
 
 /** **************************************
- * Sign up
- *************************************** */
-export const signUp = async (params: Omit<RegisterPayload, 're_password'>): Promise<void> => {
-    try {
-        await postRegister(params);
-
-        // @Todo redirect to sign in page
-    } catch (error) {
-        console.error('Error during sign up:', error);
-        throw error;
-    }
-};
-
-/** **************************************
  * Sign out
  *************************************** */
 export const signOut = async (): Promise<void> => {
     try {
         // @todo request to sign out endpoint
 
-        await clearStorage();
-    } catch (error) {
-        console.error('Error during sign out:', error);
-        throw error;
-    }
-};
-
-/** **************************************
- * Forgot password
- *************************************** */
-export const forgotPassword = async ({ email }: ForgotPasswordParams): Promise<void> => {
-    try {
         await clearStorage();
     } catch (error) {
         console.error('Error during sign out:', error);

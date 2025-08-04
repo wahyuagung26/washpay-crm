@@ -6,7 +6,7 @@ import { useMemo, useEffect, useCallback } from 'react';
 import { getProfile } from 'src/infrastructure/api';
 
 import { AuthContext } from '../auth-context';
-import { setUser, getToken, setSession, getWorkspace, setWorkspace } from './utils';
+import { setUser, getToken, setSession } from './utils';
 
 import type { AuthState } from '../../types';
 
@@ -32,18 +32,6 @@ export function AuthProvider({ children }: Props) {
 
                 // Save user data to local storage
                 setUser(res.data);
-
-                // Get workspace data from local storage
-                const workspace = getWorkspace();
-                if (!workspace) {
-                    // set first access outlet as active workspace
-                    setWorkspace({
-                        id: res.data?.access_outlets[0]?.id,
-                        name: res.data?.access_outlets[0]?.name,
-                        logo: res.data?.access_outlets[0]?.logo,
-                    });
-                }
-
 
                 setState({ user: { ...res?.data, accessToken }, loading: false });
             } else {

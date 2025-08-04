@@ -1,4 +1,3 @@
-export * from './label';
 export * from './axiosx';
 export * from './constant';
 export * from './format-time';

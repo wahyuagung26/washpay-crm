@@ -1,47 +1,15 @@
-import { ROLES_OWNER, ROLES_CASHIER, USER_WORKSPACE, ROLES_INVESTOR, JWT_STORAGE_KEY, USER_STORAGE_KEY } from './constant';
+import { USER_WORKSPACE, JWT_STORAGE_KEY, USER_STORAGE_KEY, ROLES_SUPER_ADMIN } from './constant';
 
 type FeatureKey =
   | 'dashboard'
-  | 'cashier'
-  | 'orders'
-  | 'orders.view'
-  | 'cashouts'
-  | 'cashouts.view'
-  | 'inventory'
-  | 'inventory.view'
-  | 'outlets'
-  | 'customers'
-  | 'users'
-  | 'products'
-  | 'products.view'
-  | 'report-finance'
-  | 'report-cashout'
-  | 'report-transaction'
-  | 'report-payment'
-  | 'auth'
-  | 'topup'
+  | 'clients'
+  | 'topups'
   ;
 
 const accessControl: Record<FeatureKey, number[]> = {
-    'dashboard': [ROLES_OWNER, ROLES_CASHIER, ROLES_INVESTOR],
-    'cashier': [ROLES_OWNER, ROLES_CASHIER],
-    'orders': [ROLES_OWNER, ROLES_CASHIER],
-    'orders.view': [ROLES_INVESTOR],
-    'cashouts': [ROLES_OWNER, ROLES_CASHIER],
-    'cashouts.view': [ROLES_INVESTOR],
-    'inventory': [ROLES_OWNER, ROLES_CASHIER],
-    'inventory.view': [ROLES_INVESTOR],
-    'outlets': [ROLES_OWNER],
-    'customers': [ROLES_OWNER, ROLES_CASHIER],
-    'users': [ROLES_OWNER],
-    'products': [ROLES_OWNER, ROLES_CASHIER],
-    'products.view': [ROLES_INVESTOR],
-    'report-finance': [ROLES_OWNER, ROLES_INVESTOR],
-    'report-cashout': [ROLES_OWNER, ROLES_INVESTOR],
-    'report-transaction': [ROLES_OWNER, ROLES_INVESTOR],
-    'report-payment': [ROLES_OWNER, ROLES_INVESTOR],
-    'auth': [ROLES_OWNER, ROLES_CASHIER, ROLES_INVESTOR],
-    'topup': [ROLES_OWNER],
+    'dashboard': [ROLES_SUPER_ADMIN],
+    'clients': [ROLES_SUPER_ADMIN],
+    'topups': [ROLES_SUPER_ADMIN],
 };
 
 // ----------------------------------------------------------------------

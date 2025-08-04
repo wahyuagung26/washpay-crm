@@ -4,6 +4,7 @@ const ROOTS = {
     AUTH: '/auth',
     DASHBOARD: '/dashboard',
     CLIENTS: '/clients',
+    TOPUP: '/topup',
     BASE: '',
 };
 
@@ -21,5 +22,8 @@ export const paths = {
     // CLIENTS
     clients: {
         root: ROOTS.CLIENTS,
+    },
+    topup: {
+        root: ROOTS.TOPUP,
     },
 };
