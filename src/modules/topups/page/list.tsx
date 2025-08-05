@@ -141,7 +141,7 @@ export const ListTopupPage = () => {
                                     </Stack>
                                 </TableCell>
                                 <TableCell align="center">
-                                    <Stack direction="column" spacing={1} alignItems="center">
+                                    <Stack direction="column" spacing={0.5} alignItems="center">
                                         <Chip
                                             size="small"
                                             label={item.status_text}
@@ -154,18 +154,10 @@ export const ListTopupPage = () => {
                                             </Typography>
                                         )}
                                         {item?.processed_at && (
-                                            <Stack direction="column" spacing={0.5}>
-                                                <Typography variant="body1">
-                                                    {fDateTime(item.processed_at)}
-                                                </Typography>
+                                            <Stack direction="column">
                                                 <Typography variant="body2" color="text.secondary">
-                                                    oleh: {item.processed_by || '-'}
+                                                    diproses pada : {fDateTime(item.processed_at)}
                                                 </Typography>
-                                                {item.update_evidence_at && (
-                                                    <Typography variant="body2" color="info.main">
-                                                        Bukti: {fDateTime(item.update_evidence_at)}
-                                                    </Typography>
-                                                )}
                                             </Stack>
                                         )}
                                     </Stack>
