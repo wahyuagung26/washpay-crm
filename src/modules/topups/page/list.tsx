@@ -44,8 +44,9 @@ export const ListTopupPage = () => {
     const getStatusColor = (status: number) => {
         switch (status) {
             case 0:
-            case STATUS_TOPUP_PENDING_APPROVAL:
                 return 'warning'; // Pending
+            case STATUS_TOPUP_PENDING_APPROVAL:
+                return 'info'; // Pending
             case STATUS_TOPUP_APPROVED:
                 return 'success'; // Approved
             case STATUS_TOPUP_REJECTED:
