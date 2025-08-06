@@ -3,7 +3,7 @@
 # Konfigurasi variabel
 REMOTE_USER="root"
 REMOTE_HOST="145.79.15.163"
-REMOTE_DIR="/home/wahyu/vps-container/container-nginx/nginx/html/washpay"
+REMOTE_DIR="/home/wahyu/vps-container/container-nginx/nginx/html/washpay-crm"
 LOCAL_BUILD_DIR="./out"
 
 echo "===> Mulai deploy ke $REMOTE_HOST:$REMOTE_DIR ..."
